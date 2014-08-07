@@ -2,15 +2,21 @@
   "name": "quillot",
   "version": "0.0.0",
   "description": "",
-  "main": "tandem.js",
+  "main": "lib/quillot.js",
   "dependencies": {
     "tandem-core": "~0.6.1",
     "ottypes": "~1.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-coffee": "^0.11.0"
+  },
   "scripts": {
+    "prepublish": "grunt coffee",
+    "postpublish": "grunt clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "git://github.com/thomsbg/quillot.git",
   "author": "",
   "license": "ISC"
 }
